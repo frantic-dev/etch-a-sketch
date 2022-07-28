@@ -37,7 +37,7 @@ function changeGrid(gridNumber) {
     for (let j = 1 ; j <= (gridNumber * gridNumber) ; j++) {
         createDivs();
     }
-    container.style.gridTemplateColumns = 'repeat(' + gridNumber + ", 20px )"
+    container.style.gridTemplateColumns = 'repeat(' + gridNumber + ", calc(100% / " + gridNumber + ") )"
     }
 }
 

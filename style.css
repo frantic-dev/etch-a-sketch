@@ -1,5 +1,13 @@
 body {
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(252, 255, 70, 0.637);
+}
+#board {
+    height: 97%;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    background-color: red;
+    border-radius: 25px ;
 }
 h1 {
     font-family: 'dancing script', sans-serif;
@@ -16,41 +24,43 @@ img {
     top: 25px;
 }
 #container {
+    width: 400px;
+    height: 400px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(16, 20px);
-    gap: 2px;
-    justify-content: center;
+    grid-template-columns: repeat(16, calc(100% / 16));
     position: relative;
     top: 20px;
+    border: 2px solid yellow;
 }
-div:not(#container, #board, #btn) {
+div:not(#container,#board, #btn) {
     border: 1px solid #000000;
-    height: 20px;
     background-color: white;
 }
 #btn {
-    width: 15%;
+    width: 220px;
     margin: auto;
 }
 span {
     padding: 18px;
 }
 button {
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 25px;
     border: 1px solid #000000;
 }
 .circle {
-    height: 100px;
-    width: 100px;
+    height: 65px;
+    width: 65px;
     border-radius: 50px;
 }
 .two {
     position: fixed;
-    right: 5px;
-    bottom: 5px;
+    right: 11%;
+    bottom: 15px;
 }
 .one {
     position: fixed;
-    bottom: 5px;
+    bottom: 15px;
+    left: 11%;
 }
