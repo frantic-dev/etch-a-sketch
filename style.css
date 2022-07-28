@@ -1,0 +1,11 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 30px);
+    gap: 2px;
+    justify-content: center;
+
+}
+div:not(#container) {
+    border: 1px solid #000000;
+    height: 30px;
+}
