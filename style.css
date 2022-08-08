@@ -34,7 +34,7 @@ img {
     border: 2px solid yellow;
 }
 div:not(#container,#board, #btn) {
-    border: 1px solid #000000;
+    border: 1px solid #3d3d3d8f;
     background-color: white;
 }
 span {

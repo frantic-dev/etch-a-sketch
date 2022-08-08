@@ -72,6 +72,6 @@ function randomNumber() {
 const multicolorBtn = document.querySelector("#multicolor-btn");
 
 multicolorBtn.addEventListener('click' , () => {
-    array.forEach((div) => div.addEventListener('mouseover', ()=> div.style.backgroundColor = `rgb(${randomNumber()},${randomNumber()},${randomNumber()},${randomNumber()})`))
+    array.forEach((div) => div.addEventListener('mouseover', ()=> div.style.backgroundColor = `rgb(${randomNumber()},${randomNumber()},${randomNumber()}`))
 })
 
