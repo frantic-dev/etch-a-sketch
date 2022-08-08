@@ -16,7 +16,7 @@ function colorGrey(div) {
 for (let i = 1 ; i <= 256; i++) {
     createDivs();
 }
-const button = document.querySelector('button');
+const button = document.querySelector('#change-grid');
 let gridNumber = 1;
 
 button.addEventListener('click', changeGrid);
@@ -39,5 +39,39 @@ function changeGrid(gridNumber) {
     }
     container.style.gridTemplateColumns = 'repeat(' + gridNumber + ", calc(100% / " + gridNumber + ") )"
     }
-}
+};
+
+const clearBtn = document.querySelector("#clear");
+
+clearBtn.addEventListener('click', clear)
+
+function clear() {
+    array.forEach((div) => div.setAttribute('style', "background-color: white;"))
+};
+
+const eraserBtn = document.querySelector("#eraser");
+
+function erase() {
+    array.forEach((div) => {
+        return div.addEventListener('mouseover', ()=> div.style.backgroundColor = "white")
+    })
+};
+
+eraserBtn.addEventListener('click', erase);
+
+const defaultPen = document.querySelector('#default-pen');
+
+defaultPen.addEventListener('click', () => {
+    array.forEach((div) => div.addEventListener('mouseover', ()=> div.style.backgroundColor ="grey"))
+})
+
+function randomNumber() {
+    return Math.floor(Math.random() * 256)
+};
+
+const multicolorBtn = document.querySelector("#multicolor-btn");
+
+multicolorBtn.addEventListener('click' , () => {
+    array.forEach((div) => div.addEventListener('mouseover', ()=> div.style.backgroundColor = `rgb(${randomNumber()},${randomNumber()},${randomNumber()},${randomNumber()})`))
+})
 
