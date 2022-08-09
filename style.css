@@ -34,7 +34,8 @@ img {
     border: 2px solid yellow;
 }
 div:not(#container,#board, #btn) {
-    border: 1px solid #3d3d3d8f;
+    border-left: 1px solid #3d3d3d8f;
+    border-bottom: 1px solid #3d3d3d8f;
     background-color: white;
 }
 span {
@@ -45,7 +46,6 @@ button {
     padding: 5px;
 }
 #btn {
-    /* border: 1px solid #000000; */
     width: 60%;
     display: flex;
     justify-content: space-around;
